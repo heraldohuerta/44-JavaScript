@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <!-- Ejercicio 4:
+  Utilizando la sentencia if detener el conteo regresivo cuando el valor llegue a cero y cambiar el texto de
+  bomba por "BOOM!" y el background-color de body a rojo.
+  Hint: Busca la documentación del método clearInterval() -->
+
+  <h1 id='boom'> ¡¡¡ La bomba !!! </h1>
+  <h2 id="timer">15</h2>
+  <script>
+      var timer_tag = document.getElementById('timer');
+      var timer = timer_tag.innerHTML;
+      timer = parseInt(timer);
+      var myVar = setInterval(function(){
+            timer = timer - 1;
+            if ( timer == 0)
+            {
+              var boom = document.getElementById('boom');
+              boom.innerHTML = 'BOOM!';
+              var body = document.getElementsByTagName("body");
+              document.body.style.backgroundColor = "red";
+              myStopFunction();
+            }
+            timer_tag.innerHTML = timer
+      }, 1000);
+
+
+      function myStopFunction() {
+          clearInterval(myVar);
+      }
+  </script>
+
+
+
+
+
+</body>
+</html>

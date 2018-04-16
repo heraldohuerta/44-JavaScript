@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <form name="selectForm">
+    <label for="musicTypes">Selecciona categorías y haz click en el botón.</label>
+    <select id="musicTypes" name="musicTypes" multiple="multiple">
+      <option selected="selected">R&B</option>
+      <option>Jazz</option>
+      <option>Blues</option>
+      <option>New Age</option>
+      <option>Classical</option>
+      <option>Opera</option>
+    </select>
+    <p><input id="btn" type="button" onclick='getValue()' value="¿Cuántas categorías están seleccionadas?" /></p>
+  </form>
+
+
+<script>
+
+function getValue()
+{
+  cont = 0;
+  var musicTypes =document.getElementById("musicTypes");
+  for (var i = 0; i < musicTypes.length; i++) {
+     if(musicTypes[i].selected ==true){
+          cont ++;
+      }
+  }
+  alert('A seleccionado:'+cont+' Opciones');
+}
+
+</script>
+</body>
+</html>

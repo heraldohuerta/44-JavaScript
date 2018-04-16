@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<button type="button" name="button" onclick="addP()">Add Heraldo</button>
+
+<form class="" action="index.html" method="post">
+  <input id='hora' type="text">
+  <button type="button" name="button" onclick="horaf()">Ingrese Hora</button>
+</form>
+
+
+
+
+<script>
+
+  function horaf()
+  {
+    var mensaje =  document.getElementById('hora');
+    hora = mensaje.value;
+
+    if(hora > 6 && hora < 12)   {
+     alert("Buenos dias");
+   } else if (hora >= 12 && hora < 20)   {
+       alert("Buenas Tardes");
+   } else {
+     alert("Buenas Noches");
+   };
+
+
+
+
+  };
+
+  function addP()
+  {  var mensaje = document.createElement('p');
+     mensaje.innerHTML = 'HERALDO HUERTA';
+    document.body.appendChild(mensaje);
+};
+
+
+
+
+</script>
+</body>
+</html>

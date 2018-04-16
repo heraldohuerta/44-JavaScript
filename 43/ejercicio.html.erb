@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <body>
+  <p>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer adipiscing elit
+  </a>. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu, consequat con
+  gue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc, posuere vitae, rutr
+  um et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices p
+  orttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus ma
+  gna sem, semper quis, faucibus ut, rhoncus non, mi. <a href="http://prueba2">Fusce po
+  rta</a>. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu
+  , at posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing
+  elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis ac
+  , felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metu
+  s eu urna. Aenean vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praes
+  ent id metus.</p>
+
+  <p>Aenean at nisl. Maecenas egestas dapibus odio. Vestibulum ante ipsum primis in f
+aucibus orci luctus et ultrices posuere cubilia Curae; Proin consequat auctor diam.
+<a href="http://prueba">Ut bibendum blandit est</a>. Curabitur vestibulum. Nunc malesu
+ada porttitor sapien. Aenean a lacus et metus venenatis porta. Suspendisse cursus, se
+m non dapibus tincidunt, lorem magna porttitor felis, id sodales dolor dolor sed urna
+. Sed rutrum nulla vitae tellus. Sed quis eros nec lectus tempor lacinia. Aliquam nec
+lectus nec neque aliquet dictum. Etiam <a href="http://prueba3">consequat sem quis m
+assa</a>. Donec aliquam euismod diam. In magna massa, mattis id, pellentesque sit ame
+t, porta sit amet, lectus. Curabitur posuere. Aliquam in elit. Fusce condimentum, arc
+u in scelerisque lobortis, ante arcu scelerisque mi, at cursus mi risus sed tellus.
+</p>
+
+
+<p>Donec sagittis, nibh nec ullamcorper tristique, pede velit feugiat massa, at sol
+licitudin justo tellus vitae justo. Vestibulum aliquet, nulla sit amet imperdiet susc
+ipit, nunc erat laoreet est, a <a href="http://prueba">aliquam leo odio sed sem</a>.
+Quisque eget eros vehicula diam euismod tristique. Ut dui. Donec in metus sed risus l
+aoreet sollicitudin. Proin et nisi non arcu sodales hendrerit. In sem. Cras id augue
+eu lorem dictum interdum. Donec pretium. Proin <a href="http://prueba4">egestas</a> a
+dipiscing ligula. Duis iaculis laoreet turpis. Mauris mollis est sit amet diam. Curab
+itur hendrerit, eros quis malesuada tristique, ipsum odio euismod tortor, a vestibulu
+m nisl mi at odio. <a href="http://prueba5">Sed non lectus non est pellentesque</a> a
+uctor.</p>
+
+<script>
+var mes = "Hola desafio!!, Qué facil es incluir 'comillas simples' y \"comillas dobles\"" ;
+alert(mes);
+
+// Crear un array llamado meses y que almacene el nombre de los doce meses del año. Mostrar por pantalla los
+// doce nombres utilizando la función alert().
+// var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+// for (var i=0;i<12;i++)
+// {
+// alert(meses[i]);
+// }
+// Completar las condiciones de los if del siguiente script para que los mensajes de los alert() se muestren
+// siempre de forma correcta:
+
+// var numero1 = 5;
+// var numero2 = 8;
+// if(numero1 < numero2) {
+//   alert("numero1 no es mayor que numero2");
+// };
+// if(numero2 > 0) {
+//   alert("numero2 es positivo");
+// };
+//
+// if( numero1 < 0 || numero1 != 0 ) {
+// alert("numero1 es negativo o distinto de cero");
+// };
+//
+// if( (numero1 + 1 ) < numero2) {
+// alert("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+// };
+
+
+
+// A partir de la página web proporcionada y utilizando las funciones DOM, mostrar por consola la siguiente
+// información:
+// 1. Número de enlaces de la página
+// 2. Dirección a la que enlaza el penúltimo enlace
+// 3. Número de enlaces que enlazan a http://prueba
+// 4. Número de enlaces del tercer párrafo
+
+var array = [];
+var cont_href = 0;
+
+var links = document.getElementsByTagName("a");
+for(var i=0; i<links.length; i++) {
+    array.push(links[i].href);
+
+    if ( links[i].href == 'http://prueba/')
+    {
+      cont_href++;
+    }
+}
+  var cantidad = links.length;
+  alert('Cantidad de enlaces son:' + cantidad);
+  alert('Penultimo Enlace:' + array[links.length-3]);
+  alert("Llamado http://prueba:" + cont_href);
+  var arrParr = document.getElementsByTagName("p");
+  var contLinks = arrParr[2].getElementsByTagName("a").length;
+  alert('cantidad de elnaces tercer parrafo:'+contLinks);
+
+
+</script>
+</body>
+</html>

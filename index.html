@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1 id='titulo'>Mi primera pagina Java-Script</h1>
+
+  <p id="parrafo" style="font-weight:bold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+  <ul id="list" onclick="add()">
+  <li>1</li>
+  <li>2</li>
+  </ul>
+
+<button type="button" name="button" onclick="addBody()">click</button>
+<button type="button" name="button" onclick="addP()">Add Heraldo</button>
+<button type="button" name="button" onclick="parrafo()">Propiedad</button>
+
+
+  <script>
+
+  function parrafo()
+{
+    var parrafo = document.getElementById('parrafo');
+    alert(parrafo.style.fontWeight);
+    parrafo.style.color = 'RED';
+};
+
+
+    function addP()
+    {  var mensaje = document.createElement('p');
+       mensaje.innerHTML = 'HERALDO HUERTA';
+      document.body.appendChild(mensaje);
+  };
+    function add()
+    {
+      var item = document.createElement('li');
+      var contenido = document.createTextNode('3');
+      item.appendChild(contenido);
+
+      list = document.getElementById('list');
+      list.appendChild(item);
+
+
+    };
+
+
+    function addBody()
+    {
+      var titulo = document.createElement('h3');
+      titulo.innerHTML = 'PROBANDO';
+      document.body.appendChild(titulo);
+
+    };
+
+
+    function remove(){
+     var items = document.getElementsByTagName('li');
+     var last = items.length - 1;
+     var last_item = items[last];
+     last_item.parentNode.removeChild(last_item);
+    };
+
+
+
+    // alert('Eres el ganador');
+    // var  correo = prompt('Ingresa tu correo');
+    // console.log(correo);
+    //
+    //
+    // var x = document.getElementById('titulo');
+    // alert(x.innerHTML);
+    // x.innerHTML = correo;
+
+
+  </script>
+</body>
+</html>

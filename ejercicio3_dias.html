@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <!-- Ejercicio 3:
+  El siguiente código muestra 'hola' varias veces, pero debería mostrar todos los días específicados en el
+  array, además estos días deben mostrados como elementos de una lista ordenada. -->
+
+  <ol id="dias">
+  </ol>
+
+  <script type="text/javascript">
+    var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"]
+    var parent_tag = document.getElementById('dias');
+    dias.map(function(x){
+        var doc_element = document.createElement("li");
+        node = document.createTextNode(x);
+        doc_element.appendChild(node);
+        parent_tag.appendChild(doc_element);
+        });
+  </script>
+
+
+
+
+
+
+
+</body>
+</html>

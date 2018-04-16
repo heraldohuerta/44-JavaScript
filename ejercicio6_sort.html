@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Ejercicio 6:
+  Se tiene la siguiente vista y script que incluye un arreglo. -->
+
+  <!-- Se requiere:
+  Crear una función llamada sortList() la cual debe ser ejecutada al presionar el botón “Clasificar Arreglo”.
+  La función debe iterar el arreglo:
+  Si el elemento del array es un número impar debe ser agregado a la lista ‘Impares’.
+  Si el elemento es un número par debe ser agregado a la lista ‘Pares’.
+  Si el elemento es un string debe ser agregado a la lista ‘Strings’.
+  Los elementos deben ser agregados de manera dinámica manipulando el DOM mediante JS. -->
+
+  <button onclick="sortList()">Clasificar Arreglo</button>
+
+  <ul id="par">
+      <strong>Pares</strong>
+  </ul>
+
+  <ul id="impar">
+      <strong>Impares</strong>
+  </ul>
+
+  <ul id="string">
+      <strong>Strings</strong>
+  </ul>
+
+
+  <script>
+
+  var arr = [1,'dos','tres',4,5,6,'siete',8,9,'diez'];
+
+
+ var sortList = function(){
+   arr.sort;
+
+   for(var i=0;i<arr.length;i++)
+   {
+     if (Number.isInteger(arr[i]))
+     {
+       if (parseInt(arr[i]) % 2 == 0)
+       {
+         add('par','li',arr[i] )
+       }
+       else
+       {
+         add('impar','li',arr[i] )
+       }
+
+     }
+     else {
+      add('string','ol',arr[i] )
+     }
+   }
+ }
+
+
+ function add(tag,elemento,valor)
+ {
+   var item = document.createElement(elemento);
+   var contenido = document.createTextNode(valor);
+   item.appendChild(contenido);
+   list = document.getElementById(tag);
+   list.appendChild(item);
+
+
+ };
+
+ var ver = function(valor){
+   var mensaje = document.createElement('p');
+      mensaje.innerHTML = valor;
+     document.body.appendChild(mensaje);
+ }
+</script>
+</body>
+</html>
